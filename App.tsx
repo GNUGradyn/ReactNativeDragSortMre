@@ -18,7 +18,9 @@ import { AnySizeDragSortableView } from 'react-native-drag-sort'
 function ExampleElement({text}) {
   console.log("Rendering " + text);
   return (
-    <Text style={{color: "#000000"}}>{text}</Text>
+    <View>
+      <Text style={{color: "#000000"}}>{text}</Text>
+    </View>
   )
 }
 
@@ -61,9 +63,10 @@ function App(): JSX.Element {
           dataSource={exampleData}
           keyExtractor={(item) => item.id} // 1、isRequired
           renderItem={renderItem}
+          style={{height: "100%", width: "100%"}}
           onDataChange={(data, callback)=> {
-            
-          }}
+          
+          }} 
       />
     </SafeAreaView>
   );
