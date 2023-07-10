@@ -18,7 +18,7 @@ import { AnySizeDragSortableView } from 'react-native-drag-sort'
 function ExampleElement({text}) {
   console.log("Rendering " + text);
   return (
-    <View>
+    <View style={{backgroundColor: 'red', padding: 10, margin: 5}}>
       <Text style={{color: "#000000"}}>{text}</Text>
     </View>
   )
